@@ -8,7 +8,7 @@ spec:
   issuerRef:
     name: google-issuer
     kind: ClusterIssuer
-  commonName: '*.deploys.dev'
+  commonName: '*.svc.deploys.dev'
   dnsNames:
   - 'svc.deploys.dev'
   - '*.svc.deploys.dev'
