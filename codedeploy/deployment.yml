@@ -50,7 +50,10 @@ spec:
             - name: DATABASE_USERNAME
               value: postgres
             - name: DATABASE_PASSWORD
-              value: gcpSecretManager://deploys-dev/postgres-password
+              valueFrom:
+                secretKeyRef:
+                  name: codedeploy-secret
+                  key: databasePassword
             - name: DATABASE_NAME
               value: codedeploy
             - name: APP_ENV
