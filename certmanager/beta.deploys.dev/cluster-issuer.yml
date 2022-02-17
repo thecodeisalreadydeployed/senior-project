@@ -1,0 +1,14 @@
+apiVersion: cert-manager.io/v1
+kind: ClusterIssuer
+metadata:
+  name: google-issuer
+spec:
+  acme:
+    email: acme@deploys.dev
+    server: https://acme-staging-v02.api.letsencrypt.org/directory
+    privateKeySecretRef:
+      name: google-issuer-account-key
+    solvers:
+    - dns01:
+        cloudDNS:
+          project: deploys-dev
