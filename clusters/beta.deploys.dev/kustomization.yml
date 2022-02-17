@@ -6,3 +6,4 @@ resources:
   - ../../certmanager/beta.deploys.dev
   - ../../gitserver
   - ../../postgres
+  - ../../codedeploy
