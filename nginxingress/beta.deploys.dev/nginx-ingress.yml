@@ -52,3 +52,4 @@ spec:
         args:
           - -nginx-configmaps=$(POD_NAMESPACE)/nginx-config
           - -default-server-tls-secret=$(POD_NAMESPACE)/default-server-secret
+          - -wildcard-tls-secret=default/svc.deploys.dev
