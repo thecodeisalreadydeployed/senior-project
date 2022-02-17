@@ -5,3 +5,4 @@ resources:
   - ../../nginxingress/beta.deploys.dev
   - ../../certmanager/beta.deploys.dev
   - ../../gitserver
+  - ../../postgres
