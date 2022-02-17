@@ -68,5 +68,5 @@ spec:
       volumes:
         - name: codedeploy-pv
           persistentVolumeClaim:
-            claimName: codedeploy-pvc
+            claimName: codedeploy
 status: {}
