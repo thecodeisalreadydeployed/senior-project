@@ -5,3 +5,12 @@ bases:
 resources:
   - ./cluster-issuer.yml
   - ./certificate.yml
+patches:
+  - target:
+      kind: ServiceAccount
+      name: cert-manager
+      namespace: cert-manager
+    patch: |-
+      - op: add
+        path: "/metadata/annotations/iam.gke.io~1gcp-service-account"
+        value: gke-clouddns@deploys-dev.iam.gserviceaccount.com
