@@ -1,0 +1,14 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: svc.deploys.dev
+  namespace: default
+spec:
+  secretName: svc.deploys.dev
+  issuerRef:
+    name: google-issuer
+    kind: ClusterIssuer
+  commonName: '*.deploys.dev'
+  dnsNames:
+  - 'svc.deploys.dev'
+  - '*.svc.deploys.dev'
