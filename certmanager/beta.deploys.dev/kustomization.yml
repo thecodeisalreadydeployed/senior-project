@@ -4,7 +4,8 @@ bases:
   - ../base
 resources:
   - ./cluster-issuer.yml
-  - ./certificate.yml
+  - ./certificate-api.yml
+  - ./certificate-svc.yml
 patches:
   - target:
       kind: ServiceAccount
