@@ -74,7 +74,8 @@ spec:
         - name: codedeploy-pv
           persistentVolumeClaim:
             claimName: codedeploy
-      podAffinity:
+      affinity:
+        podAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
           - labelSelector:
               matchExpressions:
