@@ -4,3 +4,4 @@ bases:
   - ../base
 resources:
   - ./nginx-ingress.yml
+  - ./load-balancer.yml
