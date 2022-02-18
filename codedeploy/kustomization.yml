@@ -4,3 +4,4 @@ resources:
   - ./service-account.yml
   - ./external-secret.yml
   - ./deployment.yml
+  - ./virtual-server.yml

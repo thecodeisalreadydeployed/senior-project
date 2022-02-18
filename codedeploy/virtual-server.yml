@@ -1,0 +1,19 @@
+apiVersion: k8s.nginx.org/v1
+kind: VirtualServer
+metadata:
+  name: api.deploys.dev
+  namespace: default
+spec:
+  host: api.deploys.dev
+  tls:
+    secret: api.deploys.dev
+    redirect:
+      enable: true
+  upstreams:
+    - name: api
+      service: codedeploy
+      port: 3000
+  routes:
+    - path: /
+      action:
+        pass: api
