@@ -74,4 +74,13 @@ spec:
         - name: codedeploy-pv
           persistentVolumeClaim:
             claimName: codedeploy
+      podAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+          - labelSelector:
+              matchExpressions:
+              - key: app
+                operator: In
+                values:
+                - gitserver
+            topologyKey: "kubernetes.io/hostname"
 status: {}
